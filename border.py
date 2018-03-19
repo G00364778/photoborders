@@ -3,6 +3,8 @@ from PIL import ImageOps as opts
 import numpy as np
 import ctypes
 
+
+# https://www.reddit.com/r/Python/comments/oixmu/add_entry_to_windows_7_context_menu_that_runs/
 def Mbox(title, text, style):
     return ctypes.windll.user32.MessageBoxW(0, text, title, style)
 
@@ -21,10 +23,9 @@ V2=int(len(ColArr)*0.1)
 pic=opts.expand(pic,border=30,fill=ColArr[V1][1])
 pic=opts.expand(pic,border=30,fill=ColArr[V2][1])
 inf=Mbox('Input', 'Save to file?', 4)
-#6-yes 7-no
-if inf==6:
+if inf==6: # Yes
     pic.save('border.jpg')
-else:
+else: # No
     pic.show()
 
 

@@ -4,15 +4,21 @@ A utility to create coloured borders around photos and images by taking coour sa
 
 ## Getting Started
 
-1. Visual studion code from Microsoft
-2. Anaconda Python 3.x 
-3. Git to get the sources on your PC.
+1. Visual studion code from Microsoft 0
+2. Anaconda Python 3.x
+3. Git to get the sources on your PC. 
 
 Open a command shell (dos) windows (cmd followed by enter )and change to the current use document folder:
 
+``` 
 cd %USERPROFILE%\Documents
+```
 
-From here run the following command: get clone https://github.com/G00364778/photoborders.git
+From here run the following command: 
+
+```
+git clone https://github.com/G00364778/photoborders.git
+```
 
 Now right click on the new folder and select "Open With Code"
 
@@ -20,7 +26,9 @@ Add the right click explorer right click features using the included right_click
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+* [Visual Studio code](https://code.visualstudio.com/download) - Python IDE for Windows
+* [Anaconda Python 3.x](https://www.anaconda.com/download/) - Python Modules from Anaconda distribution. 
+* Git/Github - Extension for VSC will do
 
 ```
 Give examples

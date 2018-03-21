@@ -8,15 +8,17 @@ import os
 #import numpy as np
 import ctypes
 import json
+from random import randint
 
-posterizeval = 1 #default: 3
+posterizeval = 2 #default: 3
 coloursort = False # True or False - sort by frequency
 border = 'thick' # thick or thin or medium
-sampledir = 'thm'
-tnsize=(250,250)
-coloridx=(2,5)
-fileinfo=[]
-init=False
+sampledir = 'thm' # a folder to store thumbnail images in 
+tnsize=(250,250) # thumbnail size
+coloridx=(2,5) # selectable colour index, overwroittem if rand enabled
+fileinfo=[] # place to store file info
+init=False # check if inot was completed previously
+rand=True #enable/disable random borders
 #ColArr=[] # a new value to store the converted rgb values
 #tn=0
 # https://www.reddit.com/r/Python/comments/oixmu/add_entry_to_windows_7_context_menu_that_runs/
@@ -52,6 +54,7 @@ def init(jpegfilepath=r'lionhead2.JPG'):
         border2 - The boder two with calculated 
         ColArr  - The colour array returned analysing the image
     """
+    global coloridx
     init=True
     ColArr=[]
     #pic=img.open(r'C:\Users\Jattie\Pictures\lionhead2.JPG')
@@ -64,7 +67,10 @@ def init(jpegfilepath=r'lionhead2.JPG'):
     tnp=opts.posterize(tn,posterizeval)
     pix=tnp.getcolors()
     print('colours: ',len(pix))
+    if rand==True:
+        coloridx=(randint(0,len(pix)-1),randint(0,len(pix)-1))
     #ColArr=[] # a new value to store the converted rgb values
+    print(coloridx)
     for i in range(len(pix)): # loop through all the colours
         RGBint=(pix[i][1][0]<<16) + (pix[i][1][1]<<8) + pix[i][1][2] # convert tuple to rgb
         ColArr.append([pix[i][0],RGBint]) # append conversions
@@ -126,6 +132,6 @@ def make(pic, border1, border2, colorArr,coloridx):
 
 
 
-tn, pic, border1, border2, ColArr = init(r'C:\Users\121988\Pictures\Agilent Magnet.jpg')
-maketh(tn, border1, border2, ColArr)
+tn, pic, border1, border2, ColArr = init(r'C:\Users\Jattie\Documents\photoborders\lionhead2.JPG')
+#maketh(tn, border1, border2, ColArr)
 make(pic, border1, border2, ColArr, coloridx)

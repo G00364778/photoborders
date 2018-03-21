@@ -17,7 +17,7 @@ sampledir = 'thm' # a folder to store thumbnail images in
 tnsize=(250,250) # thumbnail size
 coloridx=(2,5) # selectable colour index, overwroittem if rand enabled
 fileinfo=[] # place to store file info
-init=False # check if inot was completed previously
+initbool=False # check if inot was completed previously
 rand=True #enable/disable random borders
 #ColArr=[] # a new value to store the converted rgb values
 #tn=0
@@ -54,8 +54,8 @@ def init(jpegfilepath=r'lionhead2.JPG'):
         border2 - The boder two with calculated 
         ColArr  - The colour array returned analysing the image
     """
-    global coloridx
-    init=True
+    global coloridx, initbool
+    initbool=True
     ColArr=[]
     #pic=img.open(r'C:\Users\Jattie\Pictures\lionhead2.JPG')
     filepathparse(jpegfilepath)
@@ -96,7 +96,7 @@ def maketh(thumbnail, border1, border2, colorArr):
     """
     if len(fileinfo[0])>0:
         sampledir=r'{}\{}'.format(fileinfo[0],'thm')
-    if init==False:
+    if initbool==False:
         return -1
     else:
         for i in range(len(colorArr)):
@@ -115,7 +115,7 @@ def make(pic, border1, border2, colorArr,coloridx):
     """
     Create a picture with borders using the info collected
     """
-    if init==False:
+    if initbool==False:
         return -1
     else:
         border1,border2=bordersizes(pic)

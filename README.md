@@ -28,7 +28,9 @@ Add the right click explorer right click features using the included right_click
 
 * [Visual Studio code](https://code.visualstudio.com/download) - Python IDE for Windows
 * [Anaconda Python 3.x](https://www.anaconda.com/download/) - Python Modules from Anaconda distribution. 
-* Git/Github - Extension for VSC will do
+* Git/Github - Extension for VSC will do, its already present, just enable when promted.
+
+<!--
 
 ```
 Give examples
@@ -105,3 +107,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * Hat tip to anyone who's code was used
 * Inspiration
 * etc
+-->

@@ -2,6 +2,8 @@
 
 A utility to create coloured borders around photos and images by taking coour samples from the image
 
+![Sample](samples/sample1.jpg)
+
 ## Getting Started
 
 1. Visual studion code from Microsoft 0

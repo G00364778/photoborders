@@ -37,6 +37,10 @@ The resulting registy entries added looks like this:
 ![Registry Entry1](samples/regedits_1.JPG)
 ![Registry Entry2](samples/regedits_2.JPG)
 
+The right click feature should now show up in the windows explorer context menu by right clicking on a jpeg file.
+
+![Right Click](samples/right-click_feature.jpg)
+
 
 ### Prerequisites
 

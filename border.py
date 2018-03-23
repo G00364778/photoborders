@@ -94,6 +94,7 @@ def maketh(thumbnail, border1, border2, colorArr):
     border2     -   border 2 value returned or int, tyoically 30 
     colorArr    -   the colour array returned by init
     """
+    global sampledir
     if len(fileinfo[0])>0:
         sampledir=r'{}\{}'.format(fileinfo[0],'thm')
     if initbool==False:
@@ -132,6 +133,6 @@ def make(pic, border1, border2, colorArr,coloridx):
 
 
 
-tn, pic, border1, border2, ColArr = init(r'C:\Users\Jattie\Documents\photoborders\lionhead2.JPG')
+#tn, pic, border1, border2, ColArr = init(r'C:\Users\Jattie\Documents\photoborders\lionhead2.JPG')
 #maketh(tn, border1, border2, ColArr)
-make(pic, border1, border2, ColArr, coloridx)
+#make(pic, border1, border2, ColArr, coloridx)
